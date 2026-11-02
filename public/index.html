@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ريان الحربي — طالب نظم معلومات حاسوبية ومطور تطبيقات ويب وحلول برمجية متكاملة.">
+  <meta name="theme-color" content="#07111f">
+  <meta http-equiv="refresh" content="0; url=portfolio.html">
+  <link rel="canonical" href="portfolio.html">
+  <title>ريان الحربي | مطور برمجيات</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">تخطَّ إلى المحتوى</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="العودة إلى البداية">RYAN<span>/</span>HARBI</a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="#projects">المشاريع</a>
+      <a href="#lab">مختبر النشر</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <p class="eyebrow">PORTFOLIO · 2026</p>
+      <h1 id="hero-title">أبني واجهات واضحة، وأحوّلها إلى مواقع تعمل فعلًا.</h1>
+      <p class="hero__lead">أنا ريان الحربي، مطور ويب مهتم ببناء واجهات مرتبة، نماذج عملية، وتجارب رقمية قابلة للتوسع والنشر.</p>
+      <div class="hero__actions">
+        <a class="button button--primary" href="#projects">استعرض المشاريع</a>
+        <a class="button button--secondary" href="#lab">جرّب المختبر</a>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">أعمال مختارة</p>
+        <h2 id="projects-title">مشاريع أعمل عليها</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="project-card__type">منصة ويب</p>
+          <h3>منصة وادي طيبة</h3>
+          <p>موقع ثنائي اللغة يتضمن صفحات الخدمات، المتجر، النماذج، والمحتوى، مع لوحة إدارة للعمليات.</p>
+          <ul><li>واجهات متجاوبة</li><li>تنظيم المحتوى والترجمة</li><li>تجربة نماذج المستخدم</li></ul>
+        </article>
+        <article class="project-card">
+          <p class="project-card__type">تجربة نشر</p>
+          <h3>مختبر النشر الشخصي</h3>
+          <p>تطبيق Node.js بسيط لتعلم الصحة التشغيلية، المتغيرات البيئية، ومسار النشر دون مشاركة بيانات حقيقية.</p>
+          <ul><li>خادم HTTP</li><li>واجهة API تجريبية</li><li>فحص جاهزية الخدمة</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section lab" id="lab" aria-labelledby="lab-title">
+      <div class="section-heading">
+        <p class="eyebrow">تجربة تقنية آمنة</p>
+        <h2 id="lab-title">مختبر معاينة السيرة الذاتية</h2>
+        <p>يحاكي فكرة تحليل النص دون رفع ملف أو تخزين أي بيانات. الصق نصًا تدريبيًا غير حساس.</p>
+      </div>
+      <form class="lab-form" id="resume-form">
+        <label for="resume-text">نص تجريبي للسيرة</label>
+        <textarea id="resume-text" name="resume-text" rows="8" maxlength="10000" placeholder="مثال: مطور ويب لديه خبرة في JavaScript وNode.js وGit..."></textarea>
+        <button class="button button--primary" type="submit">حلل النص تجريبيًا</button>
+      </form>
+      <section class="lab-result" id="resume-result" aria-live="polite" hidden></section>
+    </section>
+
+    <section class="section deployment" aria-labelledby="deployment-title">
+      <div class="section-heading">
+        <p class="eyebrow">جاهزية النشر</p>
+        <h2 id="deployment-title">ما الذي أتعلمه هنا؟</h2>
+      </div>
+      <ol class="deployment-list">
+        <li><strong>تطوير محلي:</strong> تشغيل التطبيق والتحقق من مسار الصحة <code>/health</code>.</li>
+        <li><strong>مستودع Git:</strong> رفع المصدر إلى حسابي وربط النشر بالتحديثات.</li>
+        <li><strong>بيئة تجريبية:</strong> رابط مستقل لاختبار الموقع قبل الإطلاق.</li>
+        <li><strong>إنتاج:</strong> دومين، HTTPS، متغيرات بيئية، ومراقبة الأخطاء.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <p>ريان الحربي — مطور ويب</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

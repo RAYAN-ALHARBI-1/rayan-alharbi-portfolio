@@ -1,0 +1,35 @@
+:root { --ink:#201034; --surface:#fff; --muted:#6f637a; --line:#ded7e7; --purple:#5d3b7b; --blue:#5daeff; --soft:#f6f2fa; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); background:var(--soft); font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif; line-height:1.8; }
+a { color:inherit; }
+.skip-link { position:absolute; inset-inline-start:16px; top:-80px; padding:9px 14px; border-radius:10px; background:#fff; z-index:3; }.skip-link:focus { top:14px; }
+.site-header { display:flex; align-items:center; justify-content:space-between; gap:18px; max-width:1120px; margin:auto; padding:20px 24px; }.brand { color:var(--purple); text-decoration:none; font-size:1.35rem; font-weight:800; direction:ltr; }.brand span { color:var(--blue); }.site-header nav { display:flex; flex-wrap:wrap; gap:15px; }.site-header nav a { color:var(--muted); font-size:.9rem; text-decoration:none; }.site-header nav a:hover { color:var(--purple); }
+main { max-width:1120px; margin:auto; padding:0 24px 60px; }.hero { padding:72px 0 82px; }.eyebrow { margin:0 0 10px; color:var(--purple); font-size:.82rem; font-weight:700; }.hero h1 { max-width:900px; margin:0; font-size:clamp(2rem,7vw,4.7rem); line-height:1.28; letter-spacing:-.04em; }.hero__lead { max-width:720px; margin:25px 0 0; color:var(--muted); font-size:1.05rem; }.hero__actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }.button { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:10px 20px; border:1px solid transparent; border-radius:999px; cursor:pointer; font:inherit; font-weight:700; text-decoration:none; }.button--primary { border-color:var(--purple); color:#fff; background:var(--purple); }.button--secondary { border-color:var(--line); color:var(--purple); background:transparent; }
+.section { margin-top:25px; padding:34px; border:1px solid var(--line); border-radius:24px; background:var(--surface); }.section-heading h2 { margin:0; font-size:clamp(1.45rem,4vw,2.2rem); line-height:1.4; }.section-heading p:not(.eyebrow) { max-width:680px; margin:8px 0 0; color:var(--muted); }.project-grid { display:grid; gap:16px; margin-top:24px; }.project-card { padding:22px; border:1px solid var(--line); border-radius:18px; background:#fcfbfd; }.project-card__type { margin:0; color:var(--purple); font-size:.78rem; font-weight:700; }.project-card h3 { margin:7px 0; }.project-card p { margin:0; color:var(--muted); }.project-card ul { margin:16px 0 0; padding-inline-start:20px; color:var(--muted); font-size:.9rem; }.lab { background:linear-gradient(135deg,#25103b,#41215d); color:#fff; border-color:transparent; }.lab .eyebrow { color:#a9d5ff; }.lab .section-heading p:not(.eyebrow) { color:#ddcfea; }.lab-form { display:grid; gap:10px; margin-top:24px; }.lab-form label { font-weight:700; }.lab-form textarea { width:100%; padding:14px; border:1px solid #72558c; border-radius:14px; color:#fff; background:#1b0b2b; font:inherit; resize:vertical; }.lab-form textarea::placeholder { color:#b9a6ca; }.lab .button--primary { background:var(--blue); border-color:var(--blue); color:#1d1232; }.lab-result { margin-top:18px; padding:18px; border-radius:14px; background:#fff; color:var(--ink); }.lab-result h3 { margin:0; }.lab-result ul { margin:8px 0 0; padding-inline-start:20px; }.deployment-list { display:grid; gap:12px; margin:22px 0 0; padding:0; list-style:none; counter-reset:step; }.deployment-list li { position:relative; padding:14px 52px 14px 14px; border-radius:14px; background:#f8f5fb; color:var(--muted); }.deployment-list li::before { counter-increment:step; content:counter(step); position:absolute; inset-inline-start:14px; top:14px; display:grid; place-items:center; width:26px; height:26px; border-radius:50%; color:#fff; background:var(--purple); font-weight:700; line-height:1; }.deployment-list strong { color:var(--ink); }.deployment-list code { direction:ltr; }.site-footer { display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:1120px; margin:auto; padding:26px 24px 40px; color:var(--muted); font-size:.85rem; }.site-footer p { margin:0; }.footer-links { display:flex; gap:14px; }.footer-links a { color:var(--purple); }
+@media (min-width:641px) { .project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }.section { padding:44px; } }
+@media (max-width:480px) { .site-header { align-items:flex-start; }.site-header nav { justify-content:flex-end; }.site-footer { align-items:flex-start; flex-direction:column; }.section { padding:24px; } }
+
+/* Personal portfolio theme: intentionally separate from Taibah Valley's visual identity. */
+:root { --ink:#14213d; --paper:#f8f6f0; --surface:#fffefa; --purple:#14213d; --blue:#ff6b35; --soft:#f8f6f0; --muted:#65708a; --line:#d7d9dc; }
+body { background:var(--paper); }
+.brand { color:var(--ink); font-family:Arial,sans-serif; font-size:.85rem; font-weight:900; letter-spacing:.12em; }
+.brand span { color:var(--blue); }
+.site-header nav a { font-weight:700; }
+.hero h1 { max-width:930px; font-size:clamp(2.4rem,7vw,5.8rem); line-height:1.16; letter-spacing:-.05em; }
+.hero__lead { max-width:680px; }
+.hero__actions .button--primary { background:#14213d; border-color:#14213d; }
+.button { border-radius:5px; font-weight:800; }
+.button--secondary { border-color:#14213d; color:#14213d; }
+.section { border-radius:0; border-inline:0; padding-block:50px; }
+.section:first-of-type { border-top:2px solid #14213d; }
+.project-card { border-radius:0; background:var(--surface); }
+.project-card:first-child { color:#fff; border-color:#14213d; background:#14213d; }
+.project-card:first-child p { color:#d4dbea; }
+.project-card:first-child .project-card__type { color:#ff9f7d; }
+.project-card:first-child li { border-color:#52637f; color:#e2e8f5; }
+.lab { border-radius:0; border-color:transparent; background:#ff6b35; }
+.lab .button--primary { color:#14213d; border-color:#c8f169; background:#c8f169; }
+.lab .section-heading p:not(.eyebrow), .lab > p { color:#4c1d0d; }
+.site-footer { max-width:none; padding:72px max(24px, calc((100% - 1120px) / 2)); border-top:0; background:#14213d; }
+.site-footer .footer-links a { color:#c8f169; }
