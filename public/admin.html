@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#07111f">
+  <title>إدارة الموقع الشخصي | ريان الحربي</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow">لوحة التحكم</p>
+        <h1>إدارة المحتوى</h1>
+        <p>أدر شهاداتك ومشاريعك ومعلومات ملفك الشخصي من مكان واحد.</p>
+      </div>
+      <a href="portfolio.html">عرض الموقع العام</a>
+    </header>
+
+    <section class="admin-grid" aria-label="أدوات إدارة المحتوى">
+      <section class="admin-card admin-card--wide" aria-labelledby="profile-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">الملف الشخصي</p>
+            <h2 id="profile-title">المعلومات العامة</h2>
+          </div>
+          <button class="text-button" id="sign-out-button" type="button">تسجيل الخروج</button>
+        </div>
+        <form id="profile-form" class="content-form">
+          <div class="two-columns">
+            <div><label for="profile-name-ar">الاسم بالعربية</label><input id="profile-name-ar" name="fullNameAr" maxlength="120" required></div>
+            <div><label for="profile-name-en">الاسم بالإنجليزية</label><input id="profile-name-en" name="fullNameEn" maxlength="120" dir="ltr" required></div>
+          </div>
+          <div class="two-columns">
+            <div><label for="profile-headline-ar">المسمى المهني بالعربية</label><input id="profile-headline-ar" name="headlineAr" maxlength="180" required></div>
+            <div><label for="profile-headline-en">Professional headline in English</label><input id="profile-headline-en" name="headlineEn" maxlength="180" dir="ltr" required></div>
+          </div>
+          <div class="two-columns">
+            <div><label for="profile-location-ar">المدينة والدولة بالعربية</label><input id="profile-location-ar" name="locationAr" maxlength="160" required></div>
+            <div><label for="profile-location-en">City and country in English</label><input id="profile-location-en" name="locationEn" maxlength="160" dir="ltr" required></div>
+          </div>
+          <div class="two-columns">
+            <div><label for="profile-bio-ar">النبذة بالعربية</label><textarea id="profile-bio-ar" name="bioAr" rows="5" maxlength="1200"></textarea></div>
+            <div><label for="profile-bio-en">Biography in English</label><textarea id="profile-bio-en" name="bioEn" rows="5" maxlength="1200" dir="ltr"></textarea></div>
+          </div>
+          <div class="two-columns">
+            <div><label for="profile-email">البريد الإلكتروني</label><input id="profile-email" name="email" type="email" maxlength="254" dir="ltr" required></div>
+            <div><label for="profile-linkedin">رابط LinkedIn</label><input id="profile-linkedin" name="linkedinUrl" type="url" dir="ltr"></div>
+          </div>
+          <div class="two-columns">
+            <div><label for="profile-photo">رابط الصورة الشخصية</label><input id="profile-photo" name="photoUrl" type="url" dir="ltr" placeholder="https://… أو /image.jpeg"></div>
+            <div><label for="profile-graduation">سنة التخرج المتوقعة</label><input id="profile-graduation" name="expectedGraduationYear" type="number" min="2000" max="2100"></div>
+          </div>
+          <button class="primary-button" type="submit">حفظ معلومات الملف الشخصي</button>
+          <p class="state-message" id="profile-state" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="admin-card" aria-labelledby="certificate-form-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" id="certificate-form-label">إضافة</p>
+            <h2 id="certificate-form-title">شهادة جديدة</h2>
+          </div>
+        </div>
+        <form id="certificate-form" class="certificate-form">
+          <div class="two-columns">
+            <div><label for="certificate-title-ar">اسم الشهادة بالعربية</label><input id="certificate-title-ar" name="titleAr" maxlength="200" required></div>
+            <div><label for="certificate-title-en">Certificate title in English</label><input id="certificate-title-en" name="titleEn" maxlength="200" dir="ltr" required></div>
+          </div>
+
+          <div class="two-columns">
+            <div><label for="certificate-issuer-ar">الجهة المانحة بالعربية</label><input id="certificate-issuer-ar" name="issuerAr" maxlength="120" required></div>
+            <div><label for="certificate-issuer-en">Issuer in English</label><input id="certificate-issuer-en" name="issuerEn" maxlength="120" dir="ltr" required></div>
+          </div>
+
+          <div class="two-columns">
+            <div><label for="certificate-description-ar">الوصف المختصر بالعربية</label><textarea id="certificate-description-ar" name="descriptionAr" rows="5" maxlength="800" required></textarea></div>
+            <div><label for="certificate-description-en">Short description in English</label><textarea id="certificate-description-en" name="descriptionEn" rows="5" maxlength="800" dir="ltr" required></textarea></div>
+          </div>
+
+          <div class="two-columns">
+            <div>
+              <label for="certificate-date">تاريخ الإصدار</label>
+              <input id="certificate-date" name="issuedOn" type="date">
+            </div>
+            <div>
+              <label for="certificate-url">رابط الملف</label>
+              <input id="certificate-url" name="credentialUrl" type="url" placeholder="https://… أو /certificates/file.pdf">
+            </div>
+          </div>
+
+          <label class="checkbox-row" for="certificate-published">
+            <input id="certificate-published" name="isPublished" type="checkbox" checked>
+            <span>نشر الشهادة في الموقع العام</span>
+          </label>
+          <p class="form-note">يمكنك حفظ بيانات الشهادة الآن. رفع الملف والتحليل يضافان بعد ربط التخزين السحابي الخاص.</p>
+          <div class="form-actions">
+            <button class="primary-button" id="certificate-submit-button" type="submit">حفظ الشهادة</button>
+            <button class="secondary-button is-hidden" id="certificate-cancel-button" type="button">إلغاء التعديل</button>
+          </div>
+          <p class="state-message" id="certificate-form-state" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="admin-card" aria-labelledby="certificates-title">
+        <div class="section-heading"><div><p class="eyebrow">المحتوى الحالي</p><h2 id="certificates-title">الشهادات</h2></div></div>
+        <p class="state-message" id="certificate-state" aria-live="polite">سجّل الدخول لعرض الشهادات.</p>
+        <div class="certificate-list" id="certificate-list"></div>
+      </section>
+
+      <section class="admin-card" aria-labelledby="project-form-title">
+        <div class="section-heading"><div><p class="eyebrow" id="project-form-label">إضافة</p><h2 id="project-form-title">مشروع جديد</h2></div></div>
+        <form id="project-form" class="content-form">
+          <div class="two-columns">
+            <div><label for="project-title-ar">اسم المشروع بالعربية</label><input id="project-title-ar" name="titleAr" maxlength="200" required></div>
+            <div><label for="project-title-en">Project title in English</label><input id="project-title-en" name="titleEn" maxlength="200" dir="ltr" required></div>
+          </div>
+          <div class="two-columns">
+            <div><label for="project-category-ar">تصنيف المشروع بالعربية</label><input id="project-category-ar" name="categoryAr" maxlength="120" required></div>
+            <div><label for="project-category-en">Project category in English</label><input id="project-category-en" name="categoryEn" maxlength="120" dir="ltr" required></div>
+          </div>
+          <div class="two-columns">
+            <div><label for="project-summary-ar">وصف المشروع بالعربية</label><textarea id="project-summary-ar" name="summaryAr" rows="6" maxlength="1500" required></textarea></div>
+            <div><label for="project-summary-en">Project description in English</label><textarea id="project-summary-en" name="summaryEn" rows="6" maxlength="1500" dir="ltr" required></textarea></div>
+          </div>
+          <label for="project-technologies">التقنيات المستخدمة</label><input id="project-technologies" name="technologies" maxlength="600" placeholder="مثال: Node.js، PostgreSQL، JavaScript">
+          <label for="project-link">رابط المشروع أو الملفات</label><input id="project-link" name="externalUrl" type="url" dir="ltr">
+          <label for="project-image">رابط صورة المشروع</label><input id="project-image" name="coverImageUrl" type="url" dir="ltr">
+          <label class="checkbox-row" for="project-published"><input id="project-published" name="isPublished" type="checkbox" checked><span>نشر المشروع في الموقع العام</span></label>
+          <div class="form-actions">
+            <button class="primary-button" id="project-submit-button" type="submit">حفظ المشروع</button>
+            <button class="secondary-button is-hidden" id="project-cancel-button" type="button">إلغاء التعديل</button>
+          </div>
+          <p class="state-message" id="project-state" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="admin-card" aria-labelledby="projects-title">
+        <div class="section-heading"><div><p class="eyebrow">المحتوى الحالي</p><h2 id="projects-title">المشاريع</h2></div></div>
+        <p class="state-message" id="project-list-state" aria-live="polite"></p>
+        <div class="certificate-list" id="project-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <dialog class="confirmation-dialog" id="delete-dialog" aria-labelledby="delete-dialog-title">
+    <form method="dialog">
+      <p class="eyebrow">تأكيد الإجراء</p>
+      <h2 id="delete-dialog-title">حذف المحتوى</h2>
+      <p id="delete-dialog-message">لا يمكن التراجع عن الحذف بعد تأكيده.</p>
+      <div class="form-actions">
+        <button class="secondary-button" type="submit" value="cancel">إلغاء</button>
+        <button class="danger-button" type="submit" value="confirm">حذف نهائيًا</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

@@ -1,5 +1,13 @@
 node_modules/
 .env
+.env.*
+!.env.example
+appsettings.Development.json
+appsettings.*.local.json
+secrets.json
+*.log
+**/bin/
+**/obj/
 /السيرة الذاتية ريان الحربي (1).pdf
 /السيرة الذاتية ريان الحربي (2).pdf
 /WhatsApp Image 2026-11-02 at 1.39.29 AM.jpeg
