@@ -3,68 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ريان الحربي — طالب نظم معلومات حاسوبية ومطور تطبيقات ويب وحلول برمجية متكاملة.">
+  <meta name="description" content="ريان صالح الحربي — مطور تطبيقات ويب وحلول برمجية متكاملة." data-i18n-content="meta.description">
   <meta name="theme-color" content="#07111f">
   <title>ريان الحربي | مطور برمجيات</title>
   <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio-i18n.js" defer></script>
+  <script src="portfolio.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">تخطَّ إلى المحتوى</a>
+  <a class="skip-link" href="#main-content" data-i18n="skip">تخطَّ إلى المحتوى</a>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="العودة إلى بداية الموقع"><span>ريان</span> الحربي</a>
-    <nav aria-label="التنقل الرئيسي">
-      <a href="#about">نبذة</a>
-      <a href="#experience">الخبرة</a>
-      <a href="#projects">المشاريع</a>
-      <a href="#certifications">الشهادات</a>
-      <a href="#skills">المهارات</a>
-      <a href="#contact">تواصل</a>
+    <a class="brand" id="site-brand" href="#top" aria-label="العودة إلى بداية الموقع" data-i18n-aria-label="brand.home"><span class="brand__first" id="brand-first" data-i18n="brand.first">ريان</span> <span id="brand-last" data-i18n="brand.last">الحربي</span></a>
+    <div class="header-actions">
+      <button class="language-toggle" id="language-toggle" type="button" aria-label="التبديل إلى اللغة الإنجليزية" data-i18n-aria-label="language.switchAria">English</button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span data-i18n="nav.menu">القائمة</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+    <nav id="primary-navigation" aria-label="التنقل الرئيسي" data-i18n-aria-label="nav.label">
+      <a href="#about" data-i18n="nav.about">نبذة</a>
+      <a href="#experience" data-i18n="nav.experience">الخبرة</a>
+      <a href="#projects" data-i18n="nav.projects">المشاريع</a>
+      <a href="#certifications" data-i18n="nav.certifications">الشهادات</a>
+      <a href="#skills" data-i18n="nav.skills">المهارات</a>
+      <a href="#contact" data-i18n="nav.contact">تواصل</a>
     </nav>
   </header>
 
   <main id="main-content" tabindex="-1">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__copy">
-        <p class="eyebrow">مطور برمجيات · المدينة المنورة</p>
-        <h1 id="hero-title">أبني حلولًا رقمية تجمع بين <em>المنتج</em> والبيانات والتجربة الواضحة.</h1>
-        <p class="hero__lead">أنا ريان الحربي، طالب نظم معلومات حاسوبية في جامعة طيبة ومطور مهتم بتطبيقات الويب المتكاملة، قواعد البيانات، وتطوير حلول عملية قابلة للتوسع.</p>
+        <p class="eyebrow" id="profile-eyebrow">مطور تطبيقات ويب وحلول برمجية متكاملة · المدينة المنورة، المملكة العربية السعودية</p>
+        <h1 id="hero-title"><span data-i18n="hero.start">أبني حلولًا رقمية تجمع بين </span><em data-i18n="hero.emphasis">المنتج</em><span data-i18n="hero.end"> والبيانات والتجربة الواضحة.</span></h1>
+        <p class="hero__lead" id="profile-bio">أطوّر تطبيقات ويب متكاملة وأعمل على قواعد البيانات والخدمات الخلفية، مع اهتمام بتحويل المتطلبات إلى تجربة عملية واضحة قابلة للتوسع.</p>
         <div class="hero__actions">
-          <a class="button button--primary" href="#projects">استعرض المشاريع <span aria-hidden="true">↙</span></a>
-          <a class="button button--secondary" href="mailto:Rayanalharbi272@gmail.com">راسلني</a>
+          <a class="button button--primary" href="#projects"><span data-i18n="hero.projects">استعرض المشاريع</span> <span aria-hidden="true">↙</span></a>
+          <a class="button button--secondary" id="profile-email-button" href="mailto:Rayanalharbi272@gmail.com" data-i18n="hero.contact">راسلني</a>
         </div>
       </div>
-      <aside class="hero__card" aria-label="ملخص مهني">
-        <img class="hero__portrait" src="rayan-alharbi-portrait.jpeg" alt="ريان الحربي يرتدي الثوب السعودي">
-        <p>RAYAN ALHARBI</p>
+      <aside class="hero__card" aria-label="ملخص مهني" data-i18n-aria-label="hero.card">
+        <img class="hero__portrait" id="profile-photo" src="rayan-alharbi-portrait.jpeg" alt="الصورة الشخصية لريان الحربي" data-i18n-alt="profile.photoAlt">
+        <p id="profile-name-en">RAYAN SALEH ALHARBI</p>
         <dl>
-          <div><dt>التخصص</dt><dd>نظم المعلومات الحاسوبية</dd></div>
-          <div><dt>الجامعة</dt><dd>جامعة طيبة</dd></div>
-          <div><dt>التخرج المتوقع</dt><dd>2027</dd></div>
+          <div><dt data-i18n="profile.specialty.label">التخصص</dt><dd data-i18n="profile.specialty.value">نظم المعلومات الحاسوبية</dd></div>
+          <div><dt data-i18n="profile.university.label">الجامعة</dt><dd data-i18n="profile.university.value">جامعة طيبة</dd></div>
+          <div><dt data-i18n="profile.graduation.label">التخرج المتوقع</dt><dd id="profile-graduation">2027</dd></div>
         </dl>
       </aside>
     </section>
 
     <section class="statement" id="about" aria-labelledby="about-title">
-      <p class="section-label">01 / نبذة</p>
+      <p class="section-label" data-i18n="about.label">01 / نبذة</p>
       <div>
-        <h2 id="about-title">أحوّل المتطلبات التقنية إلى تجربة مفهومة ونتيجة قابلة للقياس.</h2>
-        <p>أمتلك أساسًا قويًا في تطوير البرمجيات وتقنيات .NET وإدارة قواعد البيانات، مع اهتمام متواصل بتطوير تطبيقات الويب والجوال، وتحليل البيانات. أعمل بعقلية شاملة تربط الواجهة بالخدمة والبيانات بدل التعامل معها كأجزاء منفصلة.</p>
+        <h2 id="about-title" data-i18n="about.title">أحوّل المتطلبات التقنية إلى تجربة مفهومة ونتيجة قابلة للقياس.</h2>
+        <p data-i18n="about.body">أمتلك أساسًا قويًا في تطوير البرمجيات وتقنيات .NET وإدارة قواعد البيانات، مع اهتمام متواصل بتطوير تطبيقات الويب والجوال، وتحليل البيانات. أعمل بعقلية شاملة تربط الواجهة بالخدمة والبيانات بدل التعامل معها كأجزاء منفصلة.</p>
       </div>
     </section>
 
     <section class="experience" id="experience" aria-labelledby="experience-title">
-      <div class="section-heading"><div><p class="section-label">02 / الخبرة</p><h2 id="experience-title">أتعلم وأبني داخل بيئات تقنية فعلية.</h2></div></div>
+      <div class="section-heading"><div><p class="section-label" data-i18n="experience.label">02 / الخبرة</p><h2 id="experience-title" data-i18n="experience.title">أتعلم وأبني داخل بيئات تقنية فعلية.</h2></div></div>
       <article class="experience-card">
-        <div class="experience-card__period"><span>2026</span><span>تدريب تعاوني</span></div>
-        <div class="experience-card__content"><p class="experience-card__role">Full Stack Engineer</p><h3>وادي طيبة <span>Taibah Valley</span></h3><p>المشاركة في برنامج التدريب التعاوني ضمن إدارة تطوير الأعمال، والتعاون في مشاريع تطوير ويب متكاملة لدعم المبادرات التقنية. يشمل ذلك تصميم وبناء واختبار تطبيقات الويب والعمل ضمن فريق متعدد التخصصات.</p><ul class="tag-list"><li>Full-Stack</li><li>Web Development</li><li>Testing</li><li>Blockchain</li><li>IoT</li><li>AI</li></ul></div>
+        <div class="experience-card__period"><span>2026</span><span data-i18n="experience.type">تدريب تعاوني</span></div>
+        <div class="experience-card__content"><p class="experience-card__role">Full Stack Engineer</p><h3 data-i18n="experience.company">وادي طيبة</h3><p data-i18n="experience.body">المشاركة في برنامج التدريب التعاوني ضمن إدارة تطوير الأعمال، والتعاون في مشاريع تطوير ويب متكاملة لدعم المبادرات التقنية. يشمل ذلك تصميم وبناء واختبار تطبيقات الويب والعمل ضمن فريق متعدد التخصصات.</p><ul class="tag-list"><li>Full-Stack</li><li>Web Development</li><li>Testing</li><li>Blockchain</li><li>IoT</li><li>AI</li></ul></div>
       </article>
     </section>
 
     <section class="projects" id="projects" aria-labelledby="projects-title">
       <div class="section-heading">
-        <div><p class="section-label">02 / أعمال مختارة</p><h2 id="projects-title">مشاريع مبنية على مشكلة واضحة.</h2></div>
+        <div><p class="section-label" data-i18n="projects.label">03 / أعمال مختارة</p><h2 id="projects-title" data-i18n="projects.title">مشاريع مبنية على مشكلة واضحة.</h2></div>
       </div>
-      <div class="project-grid">
+      <div class="project-grid" id="project-list">
         <article class="project-card project-card--dark">
           <p class="project-number">01</p>
           <p class="project-kind">تحليل بيانات · Data Mining</p>
@@ -85,13 +94,24 @@
     </section>
 
     <section class="award" aria-labelledby="award-title">
-      <p class="section-label">إنجاز</p>
-      <div><p class="award__number">01</p><h2 id="award-title">المركز الأول في تحدي الذكاء الآمن</h2><p>تحدي برمجة وأمن — كلية علوم وهندسة الحاسب، جامعة طيبة · 2026</p><a class="award__link" href="https://x.com/IbrahimAlfadli/status/2056650912479740039" target="_blank" rel="noopener noreferrer">إعلان النتائج ↗</a></div>
+      <div class="award__meta">
+        <p class="section-label" data-i18n="award.label">إنجاز موثق</p>
+        <p class="award__number">01</p>
+      </div>
+      <div class="award__content">
+        <h2 id="award-title" data-i18n="award.title">المركز الأول في تحدي الذكاء الآمن</h2>
+        <p data-i18n="award.body">تكريمًا للمساهمة ضمن الفريق الفائز بالمركز الأول في تحدي الذكاء الآمن خلال أسبوع البحث العلمي الثاني لنظم المعلومات، كلية علوم وهندسة الحاسب بجامعة طيبة · 2026.</p>
+        <a class="award__link" href="https://x.com/IbrahimAlfadli/status/2056650912479740039" target="_blank" rel="noopener noreferrer"><span data-i18n="award.link">إعلان نتائج التحدي</span> <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure class="award__proof">
+        <img class="award__certificate" src="achievements/secure-intelligence-first-place-certificate.png" alt="شهادة تقدير لريان الحربي للمساهمة ضمن الفريق الفائز بالمركز الأول في تحدي الذكاء الآمن بجامعة طيبة" data-i18n-alt="award.alt" width="1024" height="723" loading="lazy" decoding="async">
+        <figcaption data-i18n="award.caption">شهادة تقدير من كلية علوم وهندسة الحاسب بجامعة طيبة.</figcaption>
+      </figure>
     </section>
 
     <section class="certifications" aria-labelledby="certifications-title">
-      <div class="section-heading"><div><p class="section-label">04 / الشهادات</p><h2 id="certifications-title">تعلّم مستمر في الذكاء الاصطناعي والروبوتات.</h2></div></div>
-      <div class="certificate-grid">
+      <div class="section-heading"><div><p class="section-label" data-i18n="certifications.label">04 / الشهادات</p><h2 id="certifications-title" data-i18n="certifications.title">تعلّم مستمر في الذكاء الاصطناعي والروبوتات.</h2></div></div>
+      <div class="certificate-grid" id="certificate-list">
         <article class="certificate-card certificate-card--featured">
           <p class="certificate-card__issuer">IBM SkillsBuild</p>
           <h3>Lifelong Professional Skills</h3>
@@ -138,20 +158,20 @@
     </section>
 
     <section class="skills" id="skills" aria-labelledby="skills-title">
-      <div class="section-heading"><div><p class="section-label">03 / المهارات</p><h2 id="skills-title">أدواتي في البناء.</h2></div></div>
+      <div class="section-heading"><div><p class="section-label" data-i18n="skills.label">05 / المهارات</p><h2 id="skills-title" data-i18n="skills.title">أدواتي في البناء.</h2></div></div>
       <div class="skills-list">
-        <article><h3>تطوير الويب</h3><p>HTML5 · CSS3 · JavaScript · ASP.NET MVC</p></article>
-        <article><h3>التطبيقات والخدمات</h3><p>C# · .NET Core · .NET MAUI · Android Studio</p></article>
-        <article><h3>البيانات</h3><p>SQL Server · Oracle · PL/SQL · Data Mining</p></article>
-        <article><h3>التكامل والتطوير</h3><p>واجهات API · Git · GitHub · تطبيقات الويب المتكاملة</p></article>
+        <article><h3 data-i18n="skills.web.title">تطوير الويب</h3><p>HTML5 · CSS3 · JavaScript · ASP.NET MVC</p></article>
+        <article><h3 data-i18n="skills.apps.title">التطبيقات والخدمات</h3><p>C# · .NET Core · .NET MAUI · Android Studio</p></article>
+        <article><h3 data-i18n="skills.data.title">البيانات</h3><p>SQL Server · Oracle · PL/SQL · Data Mining</p></article>
+        <article><h3 data-i18n="skills.integration.title">التكامل والتطوير</h3><p data-i18n="skills.integration.value">واجهات API · Git · GitHub · تطبيقات الويب المتكاملة</p></article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" id="contact">
-    <p class="section-label">04 / تواصل</p>
-    <h2>لديك فرصة أو مشروع؟<br><a href="mailto:Rayanalharbi272@gmail.com">لنبدأ الحديث.</a></h2>
-    <div class="footer-meta"><a href="mailto:Rayanalharbi272@gmail.com">Rayanalharbi272@gmail.com</a><a href="https://www.linkedin.com/in/rayan-alharbi-617b1a3a6" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><span>المدينة المنورة، السعودية</span><span>© 2026 Rayan Alharbi</span></div>
+    <p class="section-label" data-i18n="contact.label">06 / تواصل</p>
+    <h2><span data-i18n="contact.title">لديك فرصة أو مشروع؟</span><br><a id="contact-email-heading" href="mailto:Rayanalharbi272@gmail.com" data-i18n="contact.cta">لنبدأ الحديث.</a></h2>
+    <div class="footer-meta"><a id="contact-email" href="mailto:Rayanalharbi272@gmail.com">Rayanalharbi272@gmail.com</a><a id="contact-linkedin" href="https://www.linkedin.com/in/rayan-alharbi-617b1a3a6" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><span data-i18n="contact.location">المدينة المنورة، السعودية</span><span data-i18n="contact.copyright">© 2026 Rayan Alharbi</span></div>
   </footer>
 </body>
 </html>
